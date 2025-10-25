@@ -1,0 +1,5 @@
+site/*
+.venv/*
+.vscode/settings.json
+.obsidian/*
+.DS_Store
