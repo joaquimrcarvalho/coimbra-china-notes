@@ -1,13 +1,11 @@
 name: deploy
-
 on:
   push:
     branches:
       - main
-
+      - master
 permissions:
   contents: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -17,8 +15,22 @@ jobs:
         run: |
           git config user.name github-actions[bot]
           git config user.email github-actions[bot]@users.noreply.github.com
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs
+      - run: echo "cache_id=$(date --utc '+%F')" >> $GITHUB_ENV
+      - uses: actions/cache@v4
+        with:
+          key: mkdocs-material-${{ env.cache_id }}
+          path: ~/.cache
+          restore-keys: |
+            mkdocs-material-
+      - run: pip install mkdocs-material
+      - run: pip install mkdocs-roamlinks-plugin
+      - run: pip install mkdocs-rss-plugin
+      - run: pip install mkdocs-mermaid2-plugin
+      - run: pip install mkdocs-awesome-nav
+      - run: pip install mkdocs-blog-plugin
+      # converts obsidian callouts to mkdocs callouts
+      - run: pip install mkdocs-callouts
       - run: mkdocs gh-deploy --force
