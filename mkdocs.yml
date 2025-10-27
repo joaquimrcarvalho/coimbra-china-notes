@@ -10,7 +10,6 @@ theme:
     - navigation.path
     - navigation.indexes
     - navigation.footer
-
     palette:
     # Light mode
     - media: "(prefers-color-scheme: light)"
@@ -23,7 +22,7 @@ theme:
     # Dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: pink
+      primary: green
       accent: blue
       toggle:
         icon: material/toggle-switch
