@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "docs/index.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "index"
             }
           }
         ]
@@ -182,9 +182,12 @@
   },
   "active": "0b47b223831385e4",
   "lastOpenFiles": [
+    "docs/blog/posts/first blog post.md",
+    "docs/blog/index.md",
+    "docs/blog/posts/2025-10-26_kickoff",
+    "README.md",
     "docs/index.md",
     "docs/Mattteo Ricci and Coimbra.md",
-    "README.md",
     "Welcome.md"
   ]
 }
