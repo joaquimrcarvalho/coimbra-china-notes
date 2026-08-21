@@ -1,0 +1,6 @@
+nav:
+  - Home: index.md
+  - Welcome: ../Welcome.md
+  - Matteo Ricci and Coimbra: Mattteo Ricci and Coimbra.md
+  - Blog:
+    - blog/index.md
